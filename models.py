@@ -15,6 +15,9 @@ def get_models(model: str):
         x = GRU(64)(x)
         output = keras.layers.Dense(n_classes, activation='sigmoid')(x)
         model = keras.models.Model(inputs=[base_model.input], outputs=[output])
+    
+    if model=="mobile_net" :
+        
 return model
         
          
